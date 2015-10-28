@@ -1,0 +1,7 @@
+.gallery(layout='column' flex='' ng-cloak='')
+  md-grid-list(md-cols-sm='2' md-cols-gt-md='6' md-row-height-gt-md='1:1' md-row-height='4:3' md-gutter='0')
+    md-grid-tile(ng-repeat='photo in photos')
+      .box(ng-click='openPhoto(photo, $event)')
+        .bg(style='background-image: url({{photo.thumb}});')
+      md-grid-tile-footer
+        h3 {{photo.title}}

@@ -1,0 +1,26 @@
+doctype html
+head
+  meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+  meta(name='viewport' content='initial-scale=1')
+  title Material Design Gallery
+  link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic')
+  link(rel='stylesheet', href='css/main.css')
+  script(src='js/bundle.js')
+
+  body(layout='column')
+    md-toolbar(layout='row')
+      md-button(hide-gt-sm)
+        md-icon menu
+        span.md-visually-hidden Menu
+      .md-toolbar-tools Material Design Gallery
+
+    div(layout='row' flex)
+      md-sidenav.md-sidenav-left.md-whiteframe-z2(layout='column', md-component-id='left', md-is-locked-open='$mdMedia("gt-sm")')
+        md-list
+          md-list-item(ng-click="navigateTo('#/gallery', $event)")
+            md-icon collections
+            p Gallery
+        span(flex)
+        .md-subheader(layout-padding) Photos from Death to the Stock Photo
+      md-content(layout='column' layout-padding flex ng-controller='MainCtrl as mc')
+        md-gallery(flex photos='mc.photos')

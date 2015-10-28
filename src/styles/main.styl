@@ -1,0 +1,30 @@
+@import "../../node_modules/angular-material/angular-material.css"
+@import './material-icons.styl'
+
+html, body
+  background: rgb(236,239,241)
+
+.gallery
+  md-grid-tile
+    overflow hidden
+
+    .box
+      width 100%
+      height 100%
+
+      .bg
+        width 100%
+        height 100%
+        background-position center
+
+
+md-dialog.photo
+  &,md-dialog-content
+    width 100%
+    height 100%
+
+  md-dialog-content
+    padding 0
+
+    img
+      width 100%

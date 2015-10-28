@@ -1,0 +1,8 @@
+md-dialog.photo(aria-label='{{photo.title}}')
+  md-dialog-content
+    img(ng-src='{{photo.url}}')
+
+  .md-actions
+    h3.md-subheader {{photo.title}}
+    md-button.md-icon-button(ng-click="close()")
+      md-icon close
